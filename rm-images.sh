@@ -12,6 +12,6 @@ echo '$                                                           $'
 echo '============================================================='
 echo '.'
 
-docker rmi xiaomiller/eureka-server:v1.0.0
-docker rmi xiaomiller/cloudserver:v1.0.0
-docker rmi xiaomiller/cloudclient:v1.0.0
+docker rmi xiaomiller/eureka-server:0.0.1
+docker rmi xiaomiller/cloudserver:0.0.1
+docker rmi xiaomiller/cloudclient:0.0.1
