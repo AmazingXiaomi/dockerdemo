@@ -1,0 +1,36 @@
+version: '2'
+
+
+services:
+  eureka-server:
+    image: xiaomiller/eureka-server:0.0.1
+    restart: always
+    container_name: eureka-server
+    hostname: eureka-server
+    ports:
+      - "8761:8761"
+
+  cloudserver:
+    image: xiaomiller/cloudserver:0.0.1
+    restart: always
+    container_name: cloudserver
+    hostname: cloudserver
+    ports:
+      - "8888:8888"
+    depends_on:
+      - eureka-server
+
+  cloudclient:
+    image: xiaomiller/cloudclient:0.0.1
+    restart: always
+    container_name: cloudclient
+    hostname: cloudclient
+    ports:
+      - "8081:8081"
+    depends_on:
+      - eureka-server
+      - cloudserver
+
+
+
+
