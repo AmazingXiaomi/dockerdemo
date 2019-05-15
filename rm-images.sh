@@ -12,6 +12,6 @@ echo '$                                                           $'
 echo '============================================================='
 echo '.'
 
-docker rmi xiaomiller/docker-compose-config:v1.0.0
-docker rmi xiaomiller/docker-compose-eureka:v1.0.0
-docker rmi xiaomiller/docker-compose-gateway:v1.0.0
+docker rmi xiaomiller/eureka-server:v1.0.0
+docker rmi xiaomiller/cloudserver:v1.0.0
+docker rmi xiaomiller/cloudclient:v1.0.0

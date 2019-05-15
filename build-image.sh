@@ -14,7 +14,7 @@ echo '.'
 
 # if you have engine project . plz add
 # cd ${your engine path}
-# mvn clean install
+ mvn clean install
 
 cd cloudclient
 
