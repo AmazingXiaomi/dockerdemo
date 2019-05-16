@@ -16,7 +16,7 @@ echo '.'
 # cd ${your engine path}
  mvn clean install
 
-cd cloudclient
+cd eureka-server
 
 mvn clean package docker:build
 
@@ -28,7 +28,7 @@ mvn clean package docker:build
 
 cd ..
 
-cd eureka-server
+cd cloudclient
 
 mvn clean package docker:build
 
