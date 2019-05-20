@@ -8,7 +8,7 @@ url: 47.89.17.7
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://172.31.212.22:8761/eureka/
   instance:
     statusPageUrlPath: ${server.servlet.context-path}/info
     healthCheckUrlPath: ${server.servlet.context-path}/health
