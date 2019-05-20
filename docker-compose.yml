@@ -18,7 +18,7 @@ services:
     ports:
       - "8888:8888"
     depends_on:
-      - eureka-server
+      - xiaomiller/eureka-server:0.0.1
 
   cloudclient:
     image: xiaomiller/cloudclient:0.0.1
@@ -28,8 +28,8 @@ services:
     ports:
       - "8081:8081"
     depends_on:
-      - eureka-server
-      - cloudserver
+      - xiaomiller/eureka-server:0.0.1
+      - xiaomiller/cloudserver:0.0.1
 
 
 
