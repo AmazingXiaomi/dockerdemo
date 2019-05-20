@@ -2,7 +2,7 @@
 spring:
   cloud:
     config:
-      uri:  http://127.0.0.1:8888
+      uri:  http://47.89.17.7:8888
       profile: dev
       label: master
   application:
