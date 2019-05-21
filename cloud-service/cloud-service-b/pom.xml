@@ -9,7 +9,7 @@
     </parent>
     <groupId>com.xiaomi</groupId>
     <artifactId>cloud-service-b</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>cloud-service-b</name>
     <description>Demo project for Spring Boot</description>
 
