@@ -17,14 +17,39 @@ services:
     hostname: cloudserver
     ports:
       - "8888:8888"
+#
+#  cloudclient:
+#    image: xiaomiller/cloudclient:0.0.1
+#    restart: always
+#    container_name: cloudclient
+#    hostname: cloudclient
+#    ports:
+#      - "8081:8081"
+#    depends_on:
+#      - cloudserver
+#      - eureka-server
 
-  cloudclient:
-    image: xiaomiller/cloudclient:0.0.1
+
+  cloud-service-a:
+    image: xiaomiller/cloud-service-a:0.0.1
     restart: always
-    container_name: cloudclient
-    hostname: cloudclient
+    container_name: cloud-service-a
+    hostname: cloud-service-a
     ports:
-      - "8081:8081"
+      - "8082:8082"
+    depends_on:
+      - cloudserver
+      - eureka-server
+
+
+
+  cloud-service-b:
+    image: xiaomiller/cloud-service-b:0.0.1
+    restart: always
+    container_name: cloud-service-b
+    hostname: cloud-service-b
+    ports:
+      - "8083:8083"
     depends_on:
       - cloudserver
       - eureka-server
