@@ -18,7 +18,7 @@ echo '.'
 
 cd eureka-server
 
-mvn clean package -Pdev docker:build
+mvn clean package  docker:build
 
 cd ..
 
@@ -30,19 +30,19 @@ mvn clean package -Pdev docker:build
 #
 #cd cloudclient
 #
-#mvn clean package -Pdev docker:build
+#mvn clean package  docker:build
 
 cd ..
 
 cd cloud-service/cloud-service-a
 
-mvn clean package -Pdev docker:build
+mvn clean package  docker:build
 
 cd ../..
 
 cd cloud-service/cloud-service-b
 
-mvn clean package -Pdev docker:build
+mvn clean package  docker:build
 
 cd ../..
 
