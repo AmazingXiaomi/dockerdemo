@@ -1,9 +1,9 @@
 server:
-  port: 8081
+  port: 8082
   servlet:
-    context-path: /cloudClient
+    context-path: /cloud-service-a
 
-url: 127.0.0.1
+url: 192.168.1.1
 
 eureka:
   client:
@@ -12,8 +12,8 @@ eureka:
   instance:
     statusPageUrlPath: ${server.servlet.context-path}/info
     healthCheckUrlPath: ${server.servlet.context-path}/health
-    #    prefer-ip-address: true
-    #    ip-address: 101.132.75.75
+#    prefer-ip-address: true
+#    ip-address: 101.132.75.75
     #发送心跳间隔时间
     lease-renewal-interval-in-seconds: 3
     #服务时效后注销时间
