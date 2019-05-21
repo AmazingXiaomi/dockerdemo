@@ -3,12 +3,12 @@ server:
   servlet:
     context-path: /cloudClient
 
-url: 47.89.17.7
+url: 192.168.1.1
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://172.31.212.22:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
   instance:
     statusPageUrlPath: ${server.servlet.context-path}/info
     healthCheckUrlPath: ${server.servlet.context-path}/health

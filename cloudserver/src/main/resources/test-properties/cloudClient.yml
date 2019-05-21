@@ -3,7 +3,7 @@ server:
   servlet:
     context-path: /cloudClient
 
-url: 47.89.17.7
+url: 127.0.0.1
 
 eureka:
   client:
