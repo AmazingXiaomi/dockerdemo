@@ -4,13 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiaomi</groupId>
-        <artifactId>cloud-service</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <artifactId>docker-demo</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.xiaomi</groupId>
-    <artifactId>cloud-service-b</artifactId>
+    <artifactId>server-gateway</artifactId>
     <version>0.0.1</version>
-    <name>cloud-service-b</name>
+    <packaging>jar</packaging>
+    <name>server-gateway</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -19,23 +20,25 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-mobile</artifactId>
         </dependency>
     </dependencies>
 

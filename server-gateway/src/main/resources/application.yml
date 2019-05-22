@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: server-gateway
+
+server:
+  port: 8090
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://docker-compose-eureka:8761/eureka/
+
+zuul:
+  routes:
+    demo-api-a:
+      serviceId: cloud-service-a
+      path: /**
+    demo-api-b:
+      serviceId: cloud-service-b
+      path: /**
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
