@@ -11,10 +11,11 @@
     </parent>
 
     <modules>
-        <module>cloudclient</module>
         <module>cloudserver</module>
         <module>eureka-server</module>
         <module>cloud-service</module>
+        <module>server-auth</module>
+        <module>service-auth-client</module>
     </modules>
     <groupId>com.xiaomi</groupId>
     <artifactId>docker-demo</artifactId>

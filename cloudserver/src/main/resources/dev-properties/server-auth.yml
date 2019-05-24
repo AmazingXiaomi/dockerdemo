@@ -1,0 +1,38 @@
+server:
+  port: 9090
+  servlet:
+    context-path: /server-auth
+druid:
+  url: jdbc:mysql://mysql:3306/zuul_oauth2?characterEncoding=utf8&useSSL=true
+  driver-class: com.mysql.jdbc.Driver
+  username: root
+  password: 111111
+  initial-size: 1
+  min-idle: 1
+  max-active: 20
+  test-on-borrow: true
+  filters: stat,wall,slf4j
+
+redis:
+  host: redis
+  port: 6379
+
+
+logging.level.org.springframework.security: DEBUG
+
+logging.leve.org.springframework: DEBUG
+
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+
+mybatis:
+  type-aliases-package: com.xiaomi.domain
+  mapper-locations: classpath:mapper/*.xml
+  mappers: com.xiaomi.dao.**
+  configuration-properties:
+    offsetAsPageNum: true
+    rowBoundsWithCount: true
+    reasonable: true

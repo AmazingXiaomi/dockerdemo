@@ -1,10 +1,12 @@
 # 指明配置服务中心的网址
 spring:
   application:
-    name: cloudClient
+    name: server-auth
   cloud:
     config:
-      uri:  http://localhost:8888
+      discovery:
+        enabled: true
+        serviceId: cloudserver
       label: master
 
 
