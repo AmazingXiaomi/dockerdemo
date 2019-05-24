@@ -16,6 +16,7 @@
         <module>cloud-service</module>
         <module>server-auth</module>
         <module>service-auth-client</module>
+        <module>server-gateway</module>
     </modules>
     <groupId>com.xiaomi</groupId>
     <artifactId>docker-demo</artifactId>
