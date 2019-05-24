@@ -13,11 +13,6 @@ druid:
   test-on-borrow: true
   filters: stat,wall,slf4j
 
-redis:
-  host: 47.89.17.7
-  port: 6379
-  password: 1WpN3XhQuT6jWt1R
-
 
 logging.level.org.springframework.security: DEBUG
 
@@ -29,11 +24,3 @@ security:
     resource:
       filter-order: 3
 
-mybatis:
-  type-aliases-package: com.xiaomi.domain
-  mapper-locations: classpath:mappers/*.xml
-  mappers: com.xiaomi.mapper.**
-  configuration-properties:
-    offsetAsPageNum: true
-    rowBoundsWithCount: true
-    reasonable: true

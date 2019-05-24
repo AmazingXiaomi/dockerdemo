@@ -1,4 +1,3 @@
-# 指明配置服务中心的网址
 spring:
   application:
     name: server-auth
@@ -8,6 +7,28 @@ spring:
         enabled: true
         serviceId: cloudserver
       label: master
+  redis:
+    host: 47.89.17.7
+    port: 6379
+    password: 1WpN3XhQuT6jWt1R
+
+logging:
+  level:
+    com.xiaomi.serverauth.mapper: debug
+
+url:
+  whitelist:
+    - /login
+    - /swagger-ui.html
+    - /swagger-resources/**
+    - /v2/api-docs
+    - /static/**
+    - /
+    - /css/**
+    - /js/**
+    - /favicon.ico
+
+
 
 
 
