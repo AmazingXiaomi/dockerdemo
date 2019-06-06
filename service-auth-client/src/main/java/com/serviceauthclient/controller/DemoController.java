@@ -16,8 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @RefreshScope
 public class DemoController {
 
-    @Value("${logging.level.org.springframework.security}")
-    private String param;
+
 
     @Autowired
     private RestTemplate restTemplate;
@@ -32,7 +31,7 @@ public class DemoController {
     @GetMapping("/getMovingParam")
     @PreAuthorize("permitAll()")
     public String getMovingParam() {
-        return param + "_1";
+        return "" + "_1";
     }
 
     public String demoFallback() {
