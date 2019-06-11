@@ -24,6 +24,14 @@ eureka:
 
 server:
     port: 8084
+management.security.enabled: false
+
+security:
+  oauth2:
+    resource:
+      id: service-auth-client
+      user-info-uri: http://localhost:8090/server-auth/user
+      prefer-token-info: false
 
 
 

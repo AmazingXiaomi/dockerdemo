@@ -23,7 +23,7 @@ zuul:
       sensitiveHeaders:
       serviceId: server-auth
     service-auth-client:
-        path: /order/**
+        path: /service-auth-client/**
         sensitiveHeaders:
         serviceId: service-auth-client
   add-proxy-headers: true
@@ -33,12 +33,9 @@ security:
       access-token-uri: http://localhost:8090/server-auth/oauth/token
       user-authorization-uri: http://localhost:8090/server-auth/oauth/authorize
       client_id: webapp
-      client_secret: webapp
     resource:
       user-info-uri: http://localhost:8090/server-auth/user
       prefer-token-info: false
-
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 70000
 
 
 ribbon:

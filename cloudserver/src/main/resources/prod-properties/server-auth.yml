@@ -24,3 +24,11 @@ security:
     resource:
       filter-order: 3
 
+mybatis:
+  type-aliases-package: com.xiaomi.serverauth.domain
+  mapper-locations: classpath:mappers/*.xml
+  mappers: com.xiaomi.serverauth.mapper.**
+  configuration-properties:
+    offsetAsPageNum: true
+    rowBoundsWithCount: true
+    reasonable: true

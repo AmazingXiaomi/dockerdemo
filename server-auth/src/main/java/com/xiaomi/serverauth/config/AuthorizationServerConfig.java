@@ -24,15 +24,12 @@ import org.springframework.security.oauth2.provider.token.store.redis.RedisToken
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
-
-
     @Autowired
     private AuthenticationManager authenticationManager;
     @Autowired
     private RedisConnectionFactory connectionFactory;
     @Autowired
     private UserDetailsService userDetailsService;
-
 
     @Bean
     public RedisTokenStore tokenStore() {
@@ -41,10 +38,20 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
 
     @Override
+    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+        endpoints
+                .authenticationManager(authenticationManager)
+                .userDetailsService(userDetailsService)//若无，refresh_token会有UserDetailsService is required错误
+                .tokenStore(tokenStore());
+    }
+
+    @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        security
-                .tokenKeyAccess("permitAll()")
-                .checkTokenAccess("isAuthenticated()");
+//        security
+//                .tokenKeyAccess("permitAll()")
+//                .checkTokenAccess("isAuthenticated()");
+        security.allowFormAuthenticationForClients();
+
     }
 
     @Override
@@ -57,15 +64,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .and()
                 .withClient("webapp")
                 .scopes("xx")
-                .authorizedGrantTypes("implicit");
+                .authorizedGrantTypes("password");
     }
 
-    @Override
-    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-        endpoints
-                .authenticationManager(authenticationManager)
-                .userDetailsService(userDetailsService)//若无，refresh_token会有UserDetailsService is required错误
-                .tokenStore(tokenStore());
-    }
 
 }

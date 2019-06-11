@@ -53,18 +53,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new SecurityEvaluationContextExtension();
     }
 
-    //不定义没有password grant_type
     @Override
     @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
-//    @Bean
-//    protected void configure(HttpSecurity http) throws Exception {
-//        whitelistHandler.handle(http)
-//                .authorizeRequests().anyRequest().authenticated()
-//                .and()
-//                .formLogin();
-//    }
-
 }

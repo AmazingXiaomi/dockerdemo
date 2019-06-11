@@ -9,17 +9,20 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * @ClassName: SecurityConfig
  * @User: xiaomi
  * @Description: //TODO
- * @Time: 2019/6/6 0006 下午 5:48
+ * @Time: 2019/6/11 0011 下午 2:57
  * @email: a1205938863@gmail.com
  */
 @Configuration
 @EnableOAuth2Sso
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.csrf().disable();
 
+
     }
+
 
 }
