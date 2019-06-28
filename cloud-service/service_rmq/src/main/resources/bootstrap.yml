@@ -1,0 +1,16 @@
+spring:
+  application:
+      name: service-rmq
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: cloudserver
+      label: master
+
+
+
+
+
+
+

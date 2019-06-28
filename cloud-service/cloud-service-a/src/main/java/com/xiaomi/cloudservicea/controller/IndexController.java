@@ -3,6 +3,8 @@ package com.xiaomi.cloudservicea.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
+
 /**
  * @ClassName: IndexController
  * @User: xiaomi
@@ -15,7 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController {
 
     @RequestMapping("")
-    public String index () {
-        return "hello , this is demo api b and activeInfo is: " + "cloud-service-a";
+    public String index () throws IOException {
+        throw new IOException(  );
+//        return "hello , this is demo api b and activeInfo is: " + "cloud-service-a";
     }
 }

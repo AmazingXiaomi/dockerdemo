@@ -1,8 +1,11 @@
 package com.xiaomi.servergateway.filter;
 
 import com.netflix.zuul.ZuulFilter;
+import com.netflix.zuul.context.RequestContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @ClassName: AccessFilter
@@ -31,7 +34,14 @@ public class AccessFilter extends ZuulFilter {
 
     @Override
     public Object run() {
-        log.info("this is access filter");
+        log.info("This is a pre filter, it will throw a RuntimeException");
+        RequestContext ctx = RequestContext.getCurrentContext();
+        try {
+            log.info("this is access filter");
+        } catch (Exception e) {
+            ctx.set("error.status_code", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            ctx.set("error.exception", e);
+        }
         return null;
     }
 }

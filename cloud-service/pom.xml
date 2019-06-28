@@ -43,5 +43,6 @@
     <modules>
         <module>cloud-service-a</module>
         <module>cloud-service-b</module>
+        <module>service_rmq</module>
     </modules>
 </project>

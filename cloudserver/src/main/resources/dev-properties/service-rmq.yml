@@ -1,0 +1,13 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /service-rmq
+
+apache:
+  rocketmq:
+    consumer:
+      pushConsumer: XiaourPushConsumer
+    producer:
+      producerGroup: Xiaour
+    namesrvAddr: 47.89.17.7:9876
+

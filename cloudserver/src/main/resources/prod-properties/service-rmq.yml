@@ -1,0 +1,26 @@
+server:
+  port: 8088
+  servlet.context-path: /service-rmq
+
+
+apache:
+  rocketmq:
+    consumer:
+      pushConsumer: XiaourPushConsumer
+    producer:
+      producerGroup: Xiaour
+    namesrvAddr: 47.89.17.7:9876
+druid:
+  url: jdbc:mysql://47.89.17.7:3306/zuul_oauth2?characterEncoding=utf8&useSSL=true
+  driver-class: com.mysql.jdbc.Driver
+  username: root
+  password: xiaomi1
+  initial-size: 1
+  min-idle: 1
+  max-active: 20
+  test-on-borrow: true
+  filters: stat,wall,slf4j
+
+logging.level.org.springframework.security: DEBUG
+
+logging.leve.org.springframework: DEBUG
