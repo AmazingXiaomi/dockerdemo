@@ -1,7 +1,6 @@
 server:
   port: 8082
-  servlet:
-    context-path: /cloud-service-a
+  context-path: /cloud-service-a
 
 url: 192.168.1.1
 

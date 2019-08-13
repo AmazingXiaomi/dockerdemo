@@ -60,7 +60,7 @@ public class OrderCostumer implements CommandLineRunner {
                     context.setAutoCommit(true);
                     System.out.print(Thread.currentThread().getName() + " Receive New Messages: " );
                     for (MessageExt msg: msgs) {
-                        System.out.println(msg + ", content:" + new String(msg.getBody()));
+                        System.out.println(msg.getMsgId() + ", content:" + new String(msg.getBody()));
                     }
                     try {
                         //模拟业务逻辑处理中...
