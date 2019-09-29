@@ -44,5 +44,6 @@
         <module>cloud-service-a</module>
         <module>cloud-service-b</module>
         <module>service_rmq</module>
+        <module>cloud-service-elasticsearch</module>
     </modules>
 </project>

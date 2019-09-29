@@ -1,0 +1,17 @@
+# 指明配置服务中心的网址
+spring:
+  application:
+    name: cloud-service-elasticsearch
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: cloudserver
+      label: master
+
+
+
+
+
+
+

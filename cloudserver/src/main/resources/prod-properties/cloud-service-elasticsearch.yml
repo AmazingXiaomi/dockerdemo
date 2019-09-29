@@ -1,0 +1,17 @@
+server:
+  port: 8084
+  context-path: /elasticsearch
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    statusPageUrlPath: ${server.servlet.context-path}/info
+    healthCheckUrlPath: ${server.servlet.context-path}/health
+#    prefer-ip-address: true
+#    ip-address: 101.132.75.75
+    #发送心跳间隔时间
+    lease-renewal-interval-in-seconds: 3
+    #服务时效后注销时间
+    lease-expiration-duration-in-seconds: 3
